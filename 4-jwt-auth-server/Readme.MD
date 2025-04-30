@@ -1,5 +1,4 @@
 
-```javascript
 // Install dependencies
 npm install express
 npm install dotenv
