@@ -1,3 +1,5 @@
+
+```javascript
 // Install dependencies
 npm install express
 npm install dotenv
@@ -11,7 +13,6 @@ const app = express();
 require('dotenv').config(); // Load environment variables from .env file
 
 // Set up server configuration
-
 const PORT = process.env.PORT || 3000; // Set port number from environment variable or default to 3000
 const JWT_SECRET = process.env.JWT_SECRET || 'your_secret_key'; // Set JWT secret key from environment variable
 
@@ -58,4 +59,4 @@ app.get('/api/test', TokenValidator, (req, res) => {
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });
-
+```
