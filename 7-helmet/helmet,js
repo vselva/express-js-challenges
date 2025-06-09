@@ -1,0 +1,25 @@
+const express = require('express');
+const app = express();
+
+const helmet = require('helmet');
+app.use(helmet());
+
+app.get('/api', (req, res) => {
+    res.status(200).json({message: 'Received api request!'});
+});
+
+app.listen(8080, () => {
+    console.log('Listening to port 8080');
+});
+
+/* 
+Default Security Headers by Helmet:
+==================================
+Strict-Transport-Security (HSTS)
+X-Frame-Options (Clickjacking protection)
+X-Content-Type-Options (MIME sniffing protection)
+Content-Security-Policy (CSP)
+Referrer-Policy
+Expect-CT
+X-DNS-Prefetch-Control
+*/
